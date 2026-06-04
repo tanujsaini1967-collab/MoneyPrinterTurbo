@@ -1,0 +1,33 @@
+name: Generate Daily Hindi Shorts
+
+on:
+  schedule:
+    - cron: '45 1 * * *' # Roz subah automatic chalega (IST ke hisab se subah 7:15)
+
+jobs:
+  build_and_run:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+
+    - name: Install Dependencies
+      run: |
+        pip install feedparser requests
+        pip install -r requirements.txt
+
+    - name: Fetch Latest RSS Topic
+      run: python fetch_rss.py
+
+    - name: Run MoneyPrinterTurbo
+      env:
+        PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+        GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      run: |
+        python main.py --config config.json
+
