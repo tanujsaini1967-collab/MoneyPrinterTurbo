@@ -1,0 +1,15 @@
+{
+  "language": "hi",
+  "voice": "hi-IN-Wavenet-B",
+  "video_orientation": "portrait",
+  "font": "Impact",
+  "font_color": "#FFFF00",
+  "font_size": 60,
+  "stroke_color": "#000000",
+  "stroke_width": 4,
+  "background_music": "mysterious",
+  "music_volume": 0.15,
+  "video_source": "pexels",
+  "privacyStatus": "unlisted"
+}
+
