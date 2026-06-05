@@ -32,6 +32,6 @@ jobs:
         YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
         YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
       run: |
-        python main.py --cli --prompt "Write a short, high-retention script in Hindi about an unsolved historical mystery or unexplained phenomenon for a channel named The Iron Files. Keep it dramatic and engaging." --config config.json
+        python cli.py --prompt "Write a short, high-retention script in Hindi about an unsolved historical mystery or unexplained phenomenon for a channel named The Iron Files. Keep it dramatic and engaging." --config config.json
 
 
