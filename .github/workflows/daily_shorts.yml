@@ -1,6 +1,7 @@
 name: Generate Daily Hindi Shorts
 
 on:
+  workflow_dispatch: # YEH LINE HI RUN KA BUTTON LAYEGI!
   schedule:
     - cron: '45 1 * * *' # Roz subah automatic chalega (IST ke hisab se subah 7:15)
 
