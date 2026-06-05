@@ -33,6 +33,6 @@ jobs:
         YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
         
       run: |  
-         python main.py-config config.json
+         python main.py --config config.json
 
 
