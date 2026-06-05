@@ -25,14 +25,13 @@ jobs:
     - name: Fetch Latest RSS Topic
       run: python fetch_rss.py
 
-    - name: Run MoneyPrinterTurbo
+    - name: Run MoneyPrinterTurbo via Groq
       env:
         PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
         GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
         YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
         YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
-        
-      run: |  
-         python main.py --config config.json
+      run: |
+        python main.py --cli --prompt "Write a short, high-retention script in Hindi about an unsolved historical mystery or unexplained phenomenon for a channel named The Iron Files. Keep it dramatic and engaging." --config config.json
 
 
