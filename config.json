@@ -10,6 +10,8 @@
   "background_music": "mysterious",
   "music_volume": 0.15,
   "video_source": "pexels",
-  "privacyStatus": "unlisted"
+  "privacyStatus": "unlisted",
+  "llm_provider": "groq",
+  "llm_model": "mixtral-8x7b-32768"
 }
 
